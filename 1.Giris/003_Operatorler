@@ -1,0 +1,63 @@
+public class Operatorler {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// Operatörler
+		
+		int sayi_1 = 68;
+		int sayi_2 = 7;
+		
+		int toplam = sayi_1 + sayi_2;
+		int bolum = sayi_1 / sayi_2;
+		int kalan = sayi_1 % sayi_2;
+		
+		System.out.println(toplam);
+		System.out.println(bolum);
+		System.out.println(kalan);
+		
+		// Kısa Operatörler (Shorthand Operators)
+		
+		System.out.print("------------\n");
+		
+		int x = 2;
+		int z = x++;
+		int y = x--;
+		
+		System.out.println("x:" + x);
+		System.out.println("z:" + z);
+		System.out.println("y:" + y);
+		
+		System.out.print("------------\n");
+		
+		int a = 2;
+		int c = ++a;
+		int b = --a;
+		
+		System.out.println("a:" + a);
+		System.out.println("c:" + c);
+		System.out.println("b:" + b);
+		
+		System.out.print("------------\n");
+		
+		System.out.println("Ali topu at" + 223 + 34);
+		System.out.println("Ali topu at" + (223 + 34));	
+	}
+}
+
+Output:
+
+75
+9
+5
+------------
+x:2
+z:2
+y:3
+------------
+a:2
+c:3
+b:2
+------------
+Ali topu at22334
+Ali topu at257
