@@ -1,0 +1,47 @@
+Code:
+
+public class Merhaba {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Merhaba Dünya - Eclipse ilk yazı");
+		
+		// Kaçış Karakterleri
+
+		System.out.println("\tMerhaba Dünya\n\nMerhaba Dünya");
+		
+		System.out.println(" \" in double quote\" , \\ çift tırnak içinde");
+		
+		// Bu bir yorum satırıdır :)
+		
+		/* Bunlar da birer yorum satırıdır
+		 * Bunlar da birer yorum satırıdır
+		 * Bunlar da birer yorum satırıdır
+		 * */
+     
+		/*
+		 * Değişken Tanımlama Örnekleri
+		 * */
+		int sayi = 5; 
+		char karakter_1 = '1';
+		char karakter_2 = '2';
+		String adSoyad = "Arda Turan";
+		
+		System.out.println(sayi);
+		System.out.println(karakter_1);
+		System.out.println(karakter_2);
+		System.out.println(adSoyad);
+	}
+}
+
+Output:
+
+Merhaba Dünya - Eclipse ilk yazı
+	Merhaba Dünya
+
+Merhaba Dünya
+ " in double quote" , \ çift tırnak içinde
+5
+1
+2
+Arda Turan
