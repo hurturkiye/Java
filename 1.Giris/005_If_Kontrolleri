@@ -1,0 +1,75 @@
+import java.util.Scanner;
+
+public class IfKontrolleri {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// örnek - 1
+		/*
+		 System.out.print("Yaşınızı giriniz....:");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int yas = sc.nextInt();
+		
+		if (yas >= 18) {
+			System.out.println("Reşitsiniz :)");
+		}
+		else {
+			System.out.println("Reşit değilsiniz :(");
+		}
+		System.out.print((yas >= 18));
+		
+		sc.close();
+		*/
+		
+		// örnek - 2
+		/*
+		int x = 15;
+		int y = 14;
+		
+		if (x>15 && ++y == 15) { // Burada && veya & olarak dene farkı gör!!!!
+			System.out.println("AND Kontrolüne girildi..!");	
+		}
+		System.out.println("y..1..:" + y);
+		
+		if (x>15 || ++y == 15) { // Burada || veya | olarak dene farkı gör!!!!
+			System.out.println("OR Kontrolüne girildi..!");	
+		}
+		System.out.println("y..2..:" + y);
+		*/
+		
+		// örnek - 3 - Kullanıcının seçimine göre daire yada dörtgen alanı hesaplaplayan program
+		
+		System.out.print("Daire alanı için (1) , Dikdörtgen alanı için (2) basınız..!!");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int secim = sc.nextInt();
+		
+		if (secim == 1) { // Daire alanı hesaplama - pi*r*r
+			System.out.print("Daire'nin yarıçapını giriniz....:");
+			//double pi = 3.14;
+			int r = sc.nextInt();
+			double daireAlan = Math.PI * (r * r);
+			System.out.println("Dairenin alanı....:" + daireAlan);
+		}
+		
+		else if (secim == 2) { // Dörtgen alanı hesaplama - uzun kenar * kısa kenar
+			System.out.println("Dörtgen'in uzun kenarının uzunluğunu giriniz....:");
+			int uzunKenar = sc.nextInt();
+			System.out.print("Dikdörtgen'in kısa kenarının uzunluğunu giriniz....:");
+			int kisaKenar = sc.nextInt();		
+			int dortgenAlan = uzunKenar * kisaKenar;
+			System.out.print("Diktdörtgenin alanı....:" + dortgenAlan);
+		}
+		
+		else {
+			System.out.println("Geçerli bir seçim yapmadınız!!! :(");
+		}
+		
+		sc.close();
+	}
+
+}
