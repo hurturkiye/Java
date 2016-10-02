@@ -1,0 +1,44 @@
+public class Donguler1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// 0'dan 10'a kadar olan sayıları yazdır
+		
+		// While ile
+		System.out.println("While Örneği");
+		int i = 0;
+		while (i < 10) {
+			System.out.println(i);
+			i++;
+		}
+		
+		// For ile
+		System.out.println("For Örneği");
+		for (int j = 0; j < 10; j++) {
+			System.out.println(j);
+		}
+		
+		// break deyimi
+		
+		System.out.println("break deyimi");
+		for (int k = 0; k < 10; k++) {
+			if (k == 3) {
+				break;
+			}
+			
+			System.out.println(k);
+		}
+		// continue deyimi
+		
+		System.out.println("continue deyimi");
+		for (int l = 0; l < 10; l++) {
+			if (l == 3) {
+				continue;
+			}
+			System.out.println(l);
+		}
+
+	}
+
+}
