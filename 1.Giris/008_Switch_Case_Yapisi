@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class SwitchCaseYapisi {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// Switch Case Yapısı Örneği - Menü Seçimi
+		
+		System.out.println("Menüden birini seçiniz...1-->Mağazalar--2-->Ürünler--3-->Personel");
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int menuSecim = sc.nextInt();
+		
+		switch (menuSecim) {
+			case 1:
+				System.out.println("1--Mağazalar");
+				break;
+			case 2:
+				System.out.println("2--Ürünler2");
+				break;
+			case 3:
+				System.out.println("3--Personel");
+				break;
+			default:
+				System.out.println("Yanlış Seçim");
+				break;
+		}
+		sc.close();
+	}
+}
