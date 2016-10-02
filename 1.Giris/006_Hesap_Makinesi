@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class HesapMakinesi {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			
+		// Basit Bir Hesap Makinesi
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int islemSecimi = 1;
+		
+		while (islemSecimi != 0) {
+			
+			System.out.print("Yapmak istediğiniz işlem...1(Çarp) - 2(Böl) - 3(Topla) - 4(Çıkar) - Çıkış için (0)");
+			islemSecimi = sc.nextInt();
+			
+			if (islemSecimi == 0) { // 0'a basıldı, ÇIKIŞ!!!!
+				break;
+			}
+			else {
+				
+				System.out.print("1. Sayıyı giriniz....:");
+				int sayi1 = sc.nextInt();
+				System.out.print("2. Sayıyı giriniz....:");
+				int sayi2 = sc.nextInt();
+				int sonuc = 0;
+					
+				if (islemSecimi == 1) { // ÇARPMA
+					sonuc = sayi1 * sayi2;
+					System.out.print(sayi1 + "*" + sayi2 + "=" + sonuc + "\n");
+				}
+				else if (islemSecimi == 2) { // BÖLME
+					sonuc = sayi1 / sayi2;
+					System.out.print(sayi1 + "/" + sayi2 + "=" + sonuc + "\n");
+				}
+				else if (islemSecimi == 3) { // TOPLAMA
+					sonuc = sayi1 + sayi2;
+					System.out.print(sayi1 + "+" + sayi2 + "=" + sonuc + "\n");
+				}
+				else if (islemSecimi == 4) { // ÇIKARMA
+					sonuc = sayi1 - sayi2;
+					System.out.print(sayi1 + "-" + sayi2 + "=" + sonuc + "\n");
+				}
+				else {
+					System.out.println("Böyle bir işlem yok!!! -- işlem seçiminde " + islemSecimi + " tuşuna bastınız!!!");
+				}
+			}			
+		} // while bitiş!
+		
+		sc.close();
+		
+	}
+
+}
