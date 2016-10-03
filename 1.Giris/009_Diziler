@@ -1,0 +1,54 @@
+// Dizi Tanımlama ve değişik tiplerde basit dizi örnekleri
+
+public class Diziler {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// içinde int tipinde değerler barındıran 5 elemanlı bir dizi tanımlama
+		// int tipinin default değeri
+		
+		int tamsayilar[] = new int[5];
+		
+		for (int i = 0; i < tamsayilar.length; i++) {
+			tamsayilar[i] = i*2;
+			System.out.println("index:" + i + " Değer:" + tamsayilar[i]);
+		}
+		
+		// içinde char tipinde değerler barındıran 5 elemanlı bir dizi tanımlama
+		// char tipinin default değeri
+		
+		char karakterler[] = new char[5];
+		
+		for (int i = 0; i < karakterler.length; i++) {
+			System.out.println("index:" + i + " Değer:" + karakterler[i]);
+		}
+		
+		// içinde string tipinde değerler barındıran 5 elemanlı bir dizi tanımlama
+		// String tipinin default değeri
+		
+		String kelime[] = new String[5];
+		
+		for (int i = 0; i < kelime.length; i++) {
+			System.out.println("index:" + i + " Değer:" + kelime[i]);			
+		}
+	}
+}
+
+Output: 
+
+index:0 Değer:0
+index:1 Değer:2
+index:2 Değer:4
+index:3 Değer:6
+index:4 Değer:8
+index:0 Değer: 
+index:1 Değer: 
+index:2 Değer: 
+index:3 Değer: 
+index:4 Değer: 
+index:0 Değer:null
+index:1 Değer:null
+index:2 Değer:null
+index:3 Değer:null
+index:4 Değer:null
