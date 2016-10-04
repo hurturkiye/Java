@@ -1,0 +1,63 @@
+Code:
+
+// for each loop
+		
+		String isimler[] = new String[3];
+		isimler[0] = "Ali";
+		isimler[1] = "Ayşe";
+		isimler[2] = "Fatma";
+		
+		for (String isim : isimler) {
+			System.out.println(isim);
+		}
+		System.out.println("--------------------------");
+		// Çok Boyutlu Diziler
+		
+		String ilceler[][] = new String[3][];
+		
+		// İstanbul
+		ilceler[0] = new String[]{"Beşiktaş","Sarıyer","Şişli","Beyoğlu","Kadıköy"};
+		// Ankara
+		ilceler[1] = new String[]{"Çankaya","Sincan","Etimesgut"};
+		// Bursa
+		ilceler[2] = new String[]{"Görükle","Nilüfer"};
+		
+		for (int i = 0; i < ilceler.length; i++) {
+			switch(i){
+			case 0:
+				System.out.println("İstanbul");
+				break;
+			case 1:
+				System.out.println("Ankara");
+				break;
+			case 2:
+				System.out.println("Bursa");
+				break;
+			default:
+				break;
+			}	
+				for (int j = 0; j < ilceler[i].length; j++) {
+					System.out.println(ilceler[i][j]);
+				}
+		
+		}
+
+Output:
+
+Ali
+Ayşe
+Fatma
+--------------------------
+İstanbul
+Beşiktaş
+Sarıyer
+Şişli
+Beyoğlu
+Kadıköy
+Ankara
+Çankaya
+Sincan
+Etimesgut
+Bursa
+Görükle
+Nilüfer
