@@ -1,0 +1,48 @@
+------------------CODE------------------
+
+import java.util.Random;
+
+public class IkiBoyutluDizi {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Random r = new Random();
+		
+		int [][] matris1 = new int[2][2];
+		int [][] matris2 = new int[2][2];
+		int [][] matris3 = new int[2][2];
+		
+		for (int i = 0; i < matris1.length; i++) {
+			for (int j = 0; j <matris1.length; j++) {
+				matris1[i][j] = r.nextInt(10);
+				matris2[i][j] = r.nextInt(10);
+				matris3[i][j] = matris1[i][j] + matris2[i][j];
+			}
+		}
+		
+		for (int i = 0; i < 2; i++) {
+			for (int j = 0; j < 2; j++) {
+				System.out.println("Matris1--Index:" + i + "--Index:" + j + " = " + matris1[i][j]);
+				System.out.println("Matris2--Index:" + i + "--Index:" + j + " = " + matris2[i][j]);
+				System.out.println("Matris3--Index:" + i + "--Index:" + j + " = " + matris3[i][j]);
+			}
+		}
+		
+	}
+}
+
+-----------------OUTPUT-----------------
+
+Matris1--Index:0--Index:0 = 4
+Matris2--Index:0--Index:0 = 4
+Matris3--Index:0--Index:0 = 8
+Matris1--Index:0--Index:1 = 7
+Matris2--Index:0--Index:1 = 4
+Matris3--Index:0--Index:1 = 11
+Matris1--Index:1--Index:0 = 6
+Matris2--Index:1--Index:0 = 2
+Matris3--Index:1--Index:0 = 8
+Matris1--Index:1--Index:1 = 1
+Matris2--Index:1--Index:1 = 6
+Matris3--Index:1--Index:1 = 7
