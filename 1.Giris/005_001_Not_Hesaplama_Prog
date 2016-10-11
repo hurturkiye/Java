@@ -1,0 +1,72 @@
+------------------------CODE------------------------
+
+import java.util.Scanner;
+
+public class NotHesaplamaIF {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		/* Program hakkında açıklamalar
+
+        KLAVYEDEN GİRİLEN VİZE, FİNAL NOTLARINA GÖRE ÖĞRENCİNİN NOTUNU HESAPLAYAN PROGRAM
+        Ortalama = (vize1 * 0.2 + vize2 * 0.2 + final * 0.6)
+         
+        NOT SKALASI
+         * 100-90 AA
+         * 89-80 BB
+         * 79-70 CC
+         * 69-60 DC
+         * 59-50 DD
+         * 49-0 FF
+        
+        */
+		
+		// Ekran okuyucu sc nesnesini oluştur.
+		Scanner sc = new Scanner(System.in);
+		
+		// Gerekli değişkenleri tanımla (vize1, vize2, final)
+		int vize1, vize2, finalpuan;
+		
+		// Kullanıcıdan vize ve final puanlarını al, değişkenlere at.
+		System.out.print("Lütfen 1. Vize notunu giriniz....:");
+		vize1 = sc.nextInt();
+		
+		System.out.print("Lütfen 1. Vize notunu giriniz....:");
+		vize2 = sc.nextInt();
+		
+		System.out.print("Lütfen Final notunu giriniz....:");
+		finalpuan = sc.nextInt();
+		
+		// Ortalamayı hesapla
+		
+		int ortalama = (int) (vize1 * 0.2 + vize2 * 0.2 + finalpuan * 0.6);
+		
+		System.out.println("Ortalama.....:" + ortalama);
+		
+		if (ortalama >= 85 && ortalama <=100) 
+			System.out.println("Notunuz....:AA");
+			
+		else if (ortalama >= 70 && ortalama <85) 
+			System.out.println("Notunuz....:BB");
+		
+		else if (ortalama >= 55 && ortalama <70) 
+			System.out.println("Notunuz....:CC");
+		
+		else if (ortalama >= 45 && ortalama <55) 
+			System.out.println("Notunuz....:DD");
+		
+		else if (ortalama >= 0 && ortalama <45) 
+			System.out.println("Notunuz....:FF");
+				
+		sc.close();
+	}
+}
+
+-----------------------OUTPUT-----------------------
+
+Lütfen 1. Vize notunu giriniz....:63
+Lütfen 1. Vize notunu giriniz....:65
+Lütfen Final notunu giriniz....:59
+Ortalama.....:61
+Notunuz....:CC
