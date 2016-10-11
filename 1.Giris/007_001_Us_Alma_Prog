@@ -1,0 +1,39 @@
+------------------------CODE------------------------
+
+import java.util.Scanner;
+
+public class UsAlma {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// taban sayısı olarak girilen sayının istenen kadar üssünü alan program
+		
+		// Ekran okuyucu sc nesnesini oluştur.
+		Scanner sc = new Scanner(System.in);
+		
+		// Değişkenleri Tanımla.
+		
+		int taban, us, sonuc = 1;
+		
+		System.out.print("Üssünü almak istediğiniz sayıyı giriniz...:");
+		taban = sc.nextInt();
+		
+		System.out.print("Kaçıncı üssünü almak istiyorsunuz?........:");
+		us = sc.nextInt();
+		
+		for (int i = 0; i < us; i++) {	
+			sonuc *= taban;			
+		}
+		
+		System.out.println(taban + " sayısının " + us +  ". üssü---:" + sonuc);	
+
+		sc.close();
+	}
+}
+
+-----------------------OUTPUT-----------------------
+
+Üssünü almak istediğiniz sayıyı giriniz...:5
+Kaçıncı üssünü almak istiyorsunuz?........:2
+5 sayısının 2. üssü---:25
