@@ -1,0 +1,53 @@
+------------------CODE------------------
+
+import java.util.Scanner;
+
+public class MainClass {
+
+	public static int SayiIste(int kacSayi) {
+		Scanner s = new Scanner(System.in);
+		int toplam = 0;
+		for (int i = 0; i < kacSayi; i++) {
+			System.out.print((i + 1) + ". Sayıyı giriniz...:");
+			toplam += s.nextInt();
+		}
+		s.close();
+		return toplam;		
+	}
+
+	public static double Ortalama(double x, int y) {
+		// TODO Auto-generated method stub
+				// return (x+y)/2;
+				return x/y;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		// Ekran okuyucu nesnesini oluştur.
+		Scanner sc = new Scanner(System.in);	
+		
+		/*
+		 * Ortalama ve SayiIste adlı iki metod kullanarak; kullanıcının istediği kadar sayının ortalamasını bulan program
+		 * */
+		
+		System.out.print("Kaç sayı girmek istiyorsunuz...:");
+		int kac = sc.nextInt();			// Buradan alınan kac değişkeni SayiIste metoduna parametre olarak veriliyor.
+		int toplam = SayiIste(kac);		// SayiIste metodunun döndürdüğü sayı toplamı; toplam değişkenine alınıyor.
+		
+		double sonuc = Ortalama(toplam, kac);	// Ortalama metoduna parametre olarak toplam ve kac değişkenleri veriliyor.
+		
+		System.out.print("Sonuç.....:"+ sonuc);
+		sc.close();
+	}
+}
+
+-----------------OUTPUT-----------------
+
+Kaç sayı girmek istiyorsunuz...:5
+1. Sayıyı giriniz...:4
+2. Sayıyı giriniz...:6
+3. Sayıyı giriniz...:3
+4. Sayıyı giriniz...:5
+5. Sayıyı giriniz...:9
+Sonuç.....:5.4
