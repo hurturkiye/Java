@@ -1,0 +1,70 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class SayiTahminOyunuv2 {
+	
+	static int ipucuBulucu(String ipucu){
+		int ip = 0;
+		switch (ipucu) {
+		case "e":
+			ip = 1;
+			break;
+		case "k":
+			ip = 2;
+			break;
+		case "b":
+			ip = 3;
+			break;
+		default:
+			ip = 0;
+			break;
+		}
+		return ip;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int deneme = 1;
+		String ipucu = "";
+		int altSinir = 0;
+		int ustSinir = 100;
+		int ip = 0;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		Random rand = new Random();
+		int tahmin = rand.nextInt(100);
+		
+		String a = "Merhaba; Oyunda bana vereceğiniz ipuçlarıyla tuttuğunuz sayıyı bulacağım :)\n"
+				+ "Lütfen daha küçük bir sayı tahmin etmem için k tuşuna\n"
+				+ "Lütfen daha büyük bir sayı tahmin etmem için b tuşuna basınız";
+
+		System.out.println(a);
+		
+		while (ip != 1) {
+			System.out.println(deneme + ". tahminim...:" + tahmin);
+			ipucu = sc.next();
+			ip = ipucuBulucu(ipucu);
+			if (ip == 0){
+				System.out.println("Yanlış bir tuşa bastınız, tekrar deneyiniz");
+				deneme--;
+			}
+			else if (ip == 1) {
+				System.out.println("Tebrikler bana :) " + deneme + ". denememde bildim.");
+			}
+			else
+			{ 
+				if (ip == 2){				
+				ustSinir = tahmin;
+				}
+				else if (ip == 3){
+				altSinir = tahmin;
+				}
+			}
+			tahmin = ((altSinir + ustSinir) / 2);
+			deneme++;
+		}
+		sc.close();
+	}
+}
