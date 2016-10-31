@@ -1,0 +1,41 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class SayiTahminOyunuv1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		Random rand = new Random();
+		int tutSayi = rand.nextInt(100);
+		System.out.println(tutSayi);
+		
+		int tahmin = -1;
+		int deneme = 1;
+		
+		while (tutSayi != tahmin) 
+		{
+			System.out.println(deneme + ". Tahmininiz....:");
+			tahmin = sc.nextInt();
+
+			if (tutSayi == tahmin) 
+			{
+				System.out.println(deneme + ". tahmininizde bildiniz, tebrikler");
+			}
+			else 
+			{
+				if (tutSayi < tahmin) 
+				{
+					System.out.println("Daha küçük bir sayı deneyiniz");
+				} 
+				else if(tutSayi > tahmin)
+				{
+					System.out.println("Daha büyük bir sayı deneyiniz");
+				}
+			}
+			deneme++;
+		}
+		sc.close();
+	}
+}
